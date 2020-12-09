@@ -16,14 +16,15 @@
         <link rel="stylesheet" href="css/style.css">
         
     
-        <script src="js/index.js"></script>
+        <script src="js/index.js"></script> 
     </head>
     <body>
         <header>
-            <div class="logo">
+            <div class="logo" >
                 <img src="img/icon1.png" alt="logo">
             </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
+            
+            <button class="nav-toggle" aria-label="toggle navigation" id="nav-toggle" onclick="navClick()">
                 <span class="hamburger"></span>
             </button>
             <nav class="nav">
@@ -41,7 +42,7 @@
             <h1 class="section__title section__title--intro">
                 Hi, I am  <strong>Zvi Greenspan</strong> 
             </h1>
-                <p class="section__subtitle section__subtitle--intro">software engineer</p>
+                <p class="section__subtitle section__subtitle--intro" id="heading">software engineer</p>
                 <img src="img/profile.jpg" alt="zvi profile picture" class="intro__img">
             
             

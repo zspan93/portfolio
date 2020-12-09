@@ -145,9 +145,9 @@ nav {
 .intro__img {
     box-shadow: var(--bs);
     border-radius: 50%;
-    position:  
+    position: fixed;  
 }
-
+ 
 .section__subtitle--intro {
     display: inline-block;
 }
@@ -288,7 +288,8 @@ header {
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 50px;
+    height: 100px;
 }
 
 .nav {
@@ -348,8 +349,25 @@ header {
     z-index: 1000;
 }
 
-.nav-open {
-    background: blue;
+.nav-open .nav {
+    transform:  translateX(0);
+   
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger:after {
+    opacity: 0;
 }
 
 .hamburger {
@@ -362,7 +380,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     width: 2em;
     height: 3px;
     border-radius: 1em;
