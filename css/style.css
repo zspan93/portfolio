@@ -41,6 +41,10 @@
 
 /*General styles */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -118,7 +122,8 @@ h3 { font-size: var(--fs-h3); }
 }
 
 .section__subtitle--intro,
-.section__subtitle--about {
+.section__subtitle--about,
+.section__subtitle--ed { 
     background: var(--clr-accent);
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
@@ -184,7 +189,32 @@ nav {
         left: -1.5em;
         width: calc(100% + 1.5em);
     }
+
+    .section__subtitle--pacman {
+        align-self: start;
+        grid-column: 1 /-1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -6em;
+        width: calc(100% + 12em);
+        padding-left: 5em;
+    }
 }
+.section__subtitle--about {
+    grid-column: 1 /-1;
+    grid-row: 2;
+    position: relative;
+    left: -1em;
+    width: calc(100% + 2em);
+    padding-left: 1em;
+    padding-right: calc(200px + 4em);
+    
+    
+
+}
+
+
 
     /*my services section */
     .my-services {
@@ -233,7 +263,33 @@ nav {
         margin-left: 2em;
     }
 }
+/* Education Section */
 
+.school{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.college-logo{
+    margin: 1em auto;
+    width: 75%;
+    height: 50%;
+}
+
+@media (min-width: 800px){
+
+    .schools {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    
+}
+
+
+/* About me Section */
 .about-me {
     max-width: 1000px;
     margin: 0 auto;
@@ -486,4 +542,31 @@ header {
     padding: .5em;
    
 
+}
+
+/* Individual Portfolio Items */
+
+.intro__img-item{
+    border-radius: 0;
+}
+
+.portfolio-item-individual {
+    /* background: var(--clr-accent); */
+    border-style: solid; 
+    border-color: var(--clr-accent);
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto 1em;
+}
+
+.portfolio-item-individual p{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font: var(--ff-primary);
+    font-size: var(--fs-h3);
+}
+
+.intro__img-pacman{
+    border-radius: 30px;
 }
